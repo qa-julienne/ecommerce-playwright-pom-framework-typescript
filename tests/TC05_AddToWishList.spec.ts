@@ -5,8 +5,7 @@ import {AccountPage} from '../pages/AccountPage';
 import {CategoryPage} from '../pages/CategoryPage';
 import {ProductPage} from '../pages/ProductPage'; 
 
-{test('@regression TC05_AddToWishList', async ({page}) =>
-{
+test('@regression TC05_AddToWishList', async ({page}) => {
     const home = new HomePage(page);
     const login = new LoginPage(page);
     const account = new AccountPage(page);
@@ -23,5 +22,4 @@ import {ProductPage} from '../pages/ProductPage';
     await product.clickAddToWishList();
     await expect(product.successAlert).toContainText("Success");
 
-    })
-    };
+    });

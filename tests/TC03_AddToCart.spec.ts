@@ -3,8 +3,7 @@ import {HomePage} from '../pages/HomePage';
 import {CategoryPage} from '../pages/CategoryPage';
 import {ProductPage} from '../pages/ProductPage'; 
 
-{test('@sanity @regression TC03_AddToCart', async ({page}) => 
-{
+test('@sanity @regression TC03_AddToCart', async ({page}) => {
     const home = new HomePage(page);
     const category = new CategoryPage(page);
     const product = new ProductPage(page);
@@ -16,5 +15,4 @@ import {ProductPage} from '../pages/ProductPage';
     await product.clickAddToCart();
     await expect(product.successAlert).toContainText("Success");
 
-})
-    };
+});

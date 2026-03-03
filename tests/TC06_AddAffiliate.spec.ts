@@ -5,8 +5,7 @@ import {AccountPage} from '../pages/AccountPage';
 import {AffiliatePage} from '../pages/AffiliatePage';
 
 
-{test('@regression TC06_AddAfiiliate', async ({page}) =>
-{
+test('@regression TC06_AddAfiiliate', async ({page}) =>{
     const home = new HomePage(page);
     const login = new LoginPage(page);
     const account = new AccountPage(page);
@@ -24,5 +23,4 @@ import {AffiliatePage} from '../pages/AffiliatePage';
     await affiliate.enterChequePayeeName('Apple Jack');
     await affiliate.clickContinue();
     await expect(affiliate.successMessage).toContainText("Success");
-})
-    };
+});
